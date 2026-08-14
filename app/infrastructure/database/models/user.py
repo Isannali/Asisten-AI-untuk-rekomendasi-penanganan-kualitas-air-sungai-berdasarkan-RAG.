@@ -1,7 +1,9 @@
-from datetime import datetime
+from datetime import datetime,timezone
+
 from sqlalchemy import  DateTime, Integer
 from sqlalchemy.orm import Mapped, mapped_column
-from app.database import Base
+
+from app.infrastructure.database.postgres_coneection import Base
 
 class User(Base):
     __tablename__ = "users"

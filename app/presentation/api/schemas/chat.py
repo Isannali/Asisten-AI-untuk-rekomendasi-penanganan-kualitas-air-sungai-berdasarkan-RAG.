@@ -8,6 +8,5 @@ class ChatRequest(BaseModel):
   
 class ChatResponse(BaseModel):
   conversation_id:int
-  message_id:int
-  role:str
-  content:str
+  user_message:str
+  assistant_message:str

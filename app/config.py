@@ -4,6 +4,9 @@ class Settings(BaseSettings):
   app_name:str
   app_env:str
   database_url:str
+  sumopod_api_key:str
+  sumopod_base_url:str
+  sumopod_model_llm:str
   
   model_config = SettingsConfigDict(
     env_file=".env", 

@@ -2,7 +2,7 @@ from fastapi import FastAPI,Depends
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.database import get_db
-from app.api.routes.chat import router as chat_router
+from app.presentation.api.v1.routes.chat import router as chat_router
 
 app = FastAPI(
   title="Rag_airSungai",

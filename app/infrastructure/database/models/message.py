@@ -1,7 +1,9 @@
-from datetime import datetime
+from datetime import datetime,timezone
+
 from sqlalchemy import DateTime, ForeignKey,Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column
-from app.database import Base
+
+from app.infrastructure.database.postgres_coneection import Base
 
 class Message(Base):
     __tablename__ = "messages"
@@ -26,5 +28,5 @@ class Message(Base):
       )
     created_at: Mapped[datetime] = mapped_column(
       DateTime, 
-      default=datetime.utcnow,
+      default=datetime.utcnow
       )        
